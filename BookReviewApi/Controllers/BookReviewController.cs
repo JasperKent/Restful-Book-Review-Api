@@ -1,11 +1,7 @@
 ﻿using DataAccessLayer.Data;
 using DataAccessLayer.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BookReviewApi.Controllers
 {
@@ -13,7 +9,7 @@ namespace BookReviewApi.Controllers
     [ApiController]
     public class BookReviewController : ControllerBase
     {
-        private IBookReviewRepository _repos;
+        private readonly IBookReviewRepository _repos;
 
         public BookReviewController(IBookReviewRepository repos)
         {

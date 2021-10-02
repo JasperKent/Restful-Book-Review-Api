@@ -23,7 +23,7 @@ namespace BookReviewApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BookReviewDbContext>(options =>
-               options.UseSqlite("Filename=Books.db"));
+               options.UseSqlite(Configuration.GetConnectionString("BookReviews")));
 
             services.AddTransient<IBookReviewRepository, BookReviewRepository>();
 
